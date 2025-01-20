@@ -1,0 +1,25 @@
+// app.get("/", (req, res) => {
+//     console.log("Root URL accessed!");  // Log when root URL is accessed
+    
+//     res.sendFile(path.join(__dirname, "public", "index.html"));
+
+//     // Adding the song and album
+//     const newSong = new Song({
+//         title: "Song Title",
+//         artist: "Artist Name",
+//         duration: "3:45",
+//         album: "Album Name",
+//         filePath: "/path/to/file.mp3",
+//     });
+
+//     newSong.save().then(()=> console.log("Song added"))
+
+//     const newAlbum = new Album({
+//         title: "Album Title",
+//         description: "Album Description",
+//         coverPath: "/path/to/cover.jpg",
+//     });
+
+//     newAlbum.save().then(()=> console.log("Album added"))
+        
+// });

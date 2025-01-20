@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify - Web Player: Music for everyone</title>
+    <link rel="icon" sizes="32x32" type="image/png"
+        href="https://open.spotifycdn.com/cdn/images/favicon32.b64ecc03.png">
+</head>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="utility.css">
+<script src="new.js"></script>
+
+<body>
+    <div class="container flex bg-black">
+        <div class="left">
+            <div class="home bg-grey rounded m-1 p-1">
+                <div class="closeCont">
+                    <div class="logo">
+                        <img width="90px" class="invert" src="img/logo.svg" alt="Logo">
+                    </div>
+                    <div class="close invert">
+                        <img src="img/close.svg" alt="">
+                    </div>
+                </div>
+
+                <ul>
+                    <li class="homered"><img class="invert" src="img/home.svg" alt="Home">Home</li>
+                    <li><img class="invert" src="img/search.svg" alt="Search">Search</li>
+                </ul>
+            </div>
+
+            <div class="library bg-grey rounded m-1 p-1">
+                <div class="heading">
+                    <img class="invert" src="img/playlist.svg" alt="playlist">
+                    <h2>
+                        Your library
+                    </h2>
+                </div>
+                <div class="songList">
+                    <ul>
+
+                    </ul>
+                </div>
+                <div class="footer">
+                    <div><a href="https://www.spotify.com/in-en/legal/">Legal</a></div>
+                    <div><a href="https://www.spotify.com/in-en/safetyandprivacy/">Safety & Privacy Center</a></div>
+                    <div><a href="https://www.spotify.com/in-en/legal/privacy-policy/">Privacy Policy</a></div>
+                    <div><a href="https://www.spotify.com/in-en/legal/cookies-policy/">Cookies</a></div>
+                    <div><a href="https://www.spotify.com/in-en/legal/privacy-policy/#s3">About Ads</a></div>
+                    <div><a href="https://www.spotify.com/in-en/accessibility/">Accessibility</a></div>
+                </div>
+
+            </div>
+        </div>
+        <div class="right bg-grey rounded ">
+            <div class="header p-1">
+                <div class="nav">
+                    <div class="hamburgerCont">
+                        <div class="hamburger">
+                            <img src="img/hamburger.svg" alt="">
+                        </div>
+
+                        <div class="upload-container buttons">
+                            <button class="upload-btn loginbtn" id="openUploadModal">Upload Song</button>
+                        </div>
+
+                        <div id="uploadModal" class="modal" >
+                            <div class="modal-content">
+                                <span id="closeModal" class="close-btn">&times;</span>
+                                <h2>Upload Song</h2>
+                                <form id="uploadForm">
+                                    <label for="songFile">Select Song:</label>
+                                    <input type="file" id="song" name="song" accept="audio/mp3"
+                                        required><br><br>
+
+                                    <label for="songTitle">Song Title:</label>
+                                    <input type="text" id="songTitle" name="songTitle" placeholder="Enter song title"
+                                        required><br><br>
+
+                                    <label for="artistName">Artist Name:</label>
+                                    <input type="text" id="artistName" name="artistName" placeholder="Enter artist name"
+                                        required><br><br>
+
+                                    <label for="albumId">Album Name:</label>
+                                    <select id="albumId" name="albumId" required>
+                                        <option value="" disabled    selected>Select an album</option>
+                                        <!-- Existing albums will be dynamically populated -->
+                                        <option value="new">Create New Album</option>
+                                    </select><br><br>
+
+                                    <div id="newAlbumForm" style="display: none;">
+                                        <h3>Create New Album</h3>
+                                        <label for="newAlbumName">New Album Name:</label>
+                                        <input type="text" id="newAlbumName" name="newAlbumName" placeholder="Enter new album name"><br><br>
+                        
+                                        <label for="newAlbumDescription">New Album Description:</label>
+                                        <input type="text" id="newAlbumDescription" name="newAlbumDescription" placeholder="Enter new album description"><br><br>
+                        
+                                        <label for="newAlbumCover">New Album Cover:</label>
+                                        <input type="file" id="cover" name="cover" accept="image/*"><br><br>
+                                    </div>
+
+                                    <button type="submit" class="upload-btn loginbtn">Submit</button>
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+                   
+                </div>
+
+                <div class="buttons">
+                    <button class="signupbtn">Sign up</button>
+                    <button class="loginbtn">Log in </button>
+                </div>
+            </div>
+            <div class="spotifyPlaylists ">
+                <h2>Spotify Playlists</h2>
+                <div class="cardContainer">
+
+                </div>
+                <div class="playbar">
+                    <div class="seekbar">
+                        <div class="circle"></div>
+                    </div>
+
+                    <div class="abovebar">
+                        <div class="songinfo"></div>
+
+                        <div class="songButtons">
+                            <img id="prev" src="img/prev.svg" alt="">
+                            <img id="play" src="img/play.svg" alt="">
+                            <img id="next" src="img/next.svg" alt="">
+                        </div>
+                        <div class="details">
+                            <div class="songtime"></div>
+                            <div class="volume invert">
+                                <img class="volume-icon" src="img/volume.svg" alt="Volume">
+                                <div class="volume-bar invert">
+                                    <div class="volume-track">
+                                        <div class="volume-circle"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
